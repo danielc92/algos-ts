@@ -6,7 +6,10 @@
   "scripts": {
     "watch": "run-script-os",
     "watch:darwin:linux": "node_modules/.bin/tsc --watch",
-    "watch:win32": "node_modules\\.bin\\tsc --watch"
+    "watch:win32": "node_modules\\.bin\\tsc --watch",
+    "lint": "run-script-os",
+    "lint:darwin:linux": "node_modules/.bin/eslint src/**/*",
+    "lint:win32": "node_modules\\.bin\\eslint src/**/*"
   },
   "keywords": [],
   "author": "",
