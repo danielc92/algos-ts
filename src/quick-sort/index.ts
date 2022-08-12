@@ -15,15 +15,37 @@ const quickSort = (unsorted: number[]): number[] => {
   return [...quickSort(lessThan), pivot, ...quickSort(greaterThan)];
 };
 
-const result = quickSort([1, 5, 12, 311, 55, 44, 13, 222, 333]);
-console.log(result);
-
 // Note: this does not work with duplicates!
-const result2 = quickSort([1, 5, 5, 5, 12, 311, 55, 44, 13, 222, 333]);
-console.log(result2);
-
+console.log(quickSort([1, 5, 5, 5, 12, 311, 55, 44, 13, 222, 333]));
+console.log(quickSort([1, 5, 12, 311, 55, 44, 13, 222, 333]));
 console.log(quickSort([1]));
-
+console.log(quickSort([]));
 console.log(quickSort([]));
 
-console.log(quickSort([]));
+const quickSortString = (arr: string[]): string[] => {
+  if (arr.length < 2) {
+    return arr;
+  }
+
+  // else choose a pivot
+  const pivot = arr[0];
+
+  const gt = arr.slice(1, arr.length).filter((x) => x > pivot);
+  const lt = arr.slice(1, arr.length).filter((x) => x < pivot);
+  return [
+    ...quickSortString(lt),
+    pivot,
+    ...quickSortString(gt),
+  ];
+};
+
+console.log(quickSortString([
+  'daniel',
+  'anna',
+  'george',
+  'fred',
+  'danny',
+  'jessica',
+  'bruce',
+  'jim',
+]));

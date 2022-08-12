@@ -61,11 +61,9 @@ const website: IWebPageData = {
   ],
 };
 
-let pageName = '';
-
 const searchWebPages = (data: IWebPageData) => {
   if (data.title.indexOf('Gravel') > -1) {
-    pageName = data.title;
+    console.log(data.title);
   }
   data.hrefs.forEach((x) => searchWebPages(x));
 };
