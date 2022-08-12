@@ -2,9 +2,13 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
+    // "prettier.enable": false,
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
     "editor.formatOnSave": false,
     "eslint.validate": [
       "javascript",
       "typescript"
-    ]
+    ],
+    "files.eol": "\n"
+
 }

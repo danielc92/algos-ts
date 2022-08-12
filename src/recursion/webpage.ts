@@ -1,4 +1,3 @@
-
 interface IWebPageData {
     title:string
     author:string
@@ -71,16 +70,4 @@ const searchWebPages = (data: IWebPageData) => {
   data.hrefs.forEach((x) => searchWebPages(x));
 };
 
-const searchWebPagesV2 = (data:IWebPageData, searchToken: string) => {
-  let searchResult = '';
-  if (data.title.indexOf(searchToken) > -1) {
-    searchResult = data.title;
-    return searchResult;
-  }
-  data.hrefs.forEach((x) => searchWebPagesV2(x, searchToken));
-  return undefined;
-};
-
 searchWebPages(website);
-console.log(searchWebPagesV2(website, 'Gravel'));
-console.log(pageName);

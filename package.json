@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "node_modules/.bin/tsc --watch"
+    "watch": "run-script-os",
+    "watch:darwin:linux": "node_modules/.bin/tsc --watch",
+    "watch:win32": "node_modules\\.bin\\tsc --watch"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +18,8 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "run-script-os": "^1.1.6"
   }
 }

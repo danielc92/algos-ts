@@ -77,5 +77,3 @@ getTotalDepthAndLength(caves);
 
 console.log('TOTAL CAVE DEPTH (m)', totalDepth);
 console.log('TOTAL CAVE LENGTH (m)', totalLength);
-
-
