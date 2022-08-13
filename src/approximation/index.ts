@@ -1,4 +1,6 @@
-// radio station problem
+// Example follows several radio stations across a country
+// Some radio stations cover multiple states
+// There may be overlap between stations
 
 interface Stations {
     [key:string] : Set<string>
